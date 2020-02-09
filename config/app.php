@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'flipmart'),
+    'name' => env('APP_NAME', 'flipcart'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost/flipmart/public'),
+    'url' => env('APP_URL', 'http://localhost/flipcart/public'),
 
     'asset_url' => env('ASSET_URL', null),
 
@@ -119,7 +119,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY','base64:upSObYjrf/xfnI0+ne20L8jIpoiSnm+Y/hWpxQwyf4E='),
+    'key' => env('APP_KEY','base64:kG/Jt0xdGrV9LdCZ3POFw+px0WwQDgaUI937FKLWIZ0='),
 
     'cipher' => 'AES-256-CBC',
 
@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+		Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         /*
          * Application Service Providers...
          */

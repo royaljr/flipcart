@@ -13,7 +13,7 @@ return array(
 
     'filename'  => '_ide_helper',
     'format'    => 'php',
-
+    
     'meta_filename' => '.phpstorm.meta.php',
 
     /*
@@ -25,7 +25,7 @@ return array(
     |
     */
 
-    'include_fluent' => true,
+    'include_fluent' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -75,7 +75,7 @@ return array(
     |
     */
 
-    'include_helpers' => true,
+    'include_helpers' => false,
 
     'helper_files' => array(
         base_path().'/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
