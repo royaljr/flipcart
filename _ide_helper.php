@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 6.14.0 on 2020-02-09 22:19:00.
+ * Generated for Laravel 6.14.0 on 2020-02-10 01:23:49.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -12061,6 +12061,28 @@ namespace Illuminate\Support\Facades {
     /**
      * 
      *
+     * @method static string getName()
+     * @method static string getId()
+     * @method static void setId(string $id)
+     * @method static bool start()
+     * @method static bool save()
+     * @method static array all()
+     * @method static bool exists(string|array $key)
+     * @method static bool has(string|array $key)
+     * @method static mixed get(string $key, $default = null)
+     * @method static mixed pull(string $key, $default = null)
+     * @method static void put(string|array $key, $value = null)
+     * @method static string token()
+     * @method static mixed remove(string $key)
+     * @method static void forget(string|array $keys)
+     * @method static void flush()
+     * @method static bool migrate(bool $destroy = false)
+     * @method static bool isStarted()
+     * @method static string|null previousUrl()
+     * @method static void setPreviousUrl(string $url)
+     * @method static \SessionHandlerInterface getHandler()
+     * @method static bool handlerNeedsRequest()
+     * @method static void setRequestOnHandler(\Illuminate\Http\Request $request)
      * @see \Illuminate\Session\SessionManager
      * @see \Illuminate\Session\Store
      */ 
@@ -12144,547 +12166,6 @@ namespace Illuminate\Support\Facades {
             //Method inherited from \Illuminate\Support\Manager            
                         /** @var \Illuminate\Session\SessionManager $instance */
                         return $instance->getDrivers();
-        }
-        
-        /**
-         * Start the session, reading the data from a handler.
-         *
-         * @return bool 
-         * @static 
-         */ 
-        public static function start()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->start();
-        }
-        
-        /**
-         * Save the session data to storage.
-         *
-         * @return void 
-         * @static 
-         */ 
-        public static function save()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->save();
-        }
-        
-        /**
-         * Age the flash data for the session.
-         *
-         * @return void 
-         * @static 
-         */ 
-        public static function ageFlashData()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->ageFlashData();
-        }
-        
-        /**
-         * Get all of the session data.
-         *
-         * @return array 
-         * @static 
-         */ 
-        public static function all()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->all();
-        }
-        
-        /**
-         * Get a subset of the session data.
-         *
-         * @param array $keys
-         * @return array 
-         * @static 
-         */ 
-        public static function only($keys)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->only($keys);
-        }
-        
-        /**
-         * Checks if a key exists.
-         *
-         * @param string|array $key
-         * @return bool 
-         * @static 
-         */ 
-        public static function exists($key)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->exists($key);
-        }
-        
-        /**
-         * Checks if a key is present and not null.
-         *
-         * @param string|array $key
-         * @return bool 
-         * @static 
-         */ 
-        public static function has($key)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->has($key);
-        }
-        
-        /**
-         * Get an item from the session.
-         *
-         * @param string $key
-         * @param mixed $default
-         * @return mixed 
-         * @static 
-         */ 
-        public static function get($key, $default = null)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->get($key, $default);
-        }
-        
-        /**
-         * Get the value of a given key and then forget it.
-         *
-         * @param string $key
-         * @param string|null $default
-         * @return mixed 
-         * @static 
-         */ 
-        public static function pull($key, $default = null)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->pull($key, $default);
-        }
-        
-        /**
-         * Determine if the session contains old input.
-         *
-         * @param string|null $key
-         * @return bool 
-         * @static 
-         */ 
-        public static function hasOldInput($key = null)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->hasOldInput($key);
-        }
-        
-        /**
-         * Get the requested item from the flashed input array.
-         *
-         * @param string|null $key
-         * @param mixed $default
-         * @return mixed 
-         * @static 
-         */ 
-        public static function getOldInput($key = null, $default = null)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->getOldInput($key, $default);
-        }
-        
-        /**
-         * Replace the given session attributes entirely.
-         *
-         * @param array $attributes
-         * @return void 
-         * @static 
-         */ 
-        public static function replace($attributes)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->replace($attributes);
-        }
-        
-        /**
-         * Put a key / value pair or array of key / value pairs in the session.
-         *
-         * @param string|array $key
-         * @param mixed $value
-         * @return void 
-         * @static 
-         */ 
-        public static function put($key, $value = null)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->put($key, $value);
-        }
-        
-        /**
-         * Get an item from the session, or store the default value.
-         *
-         * @param string $key
-         * @param \Closure $callback
-         * @return mixed 
-         * @static 
-         */ 
-        public static function remember($key, $callback)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->remember($key, $callback);
-        }
-        
-        /**
-         * Push a value onto a session array.
-         *
-         * @param string $key
-         * @param mixed $value
-         * @return void 
-         * @static 
-         */ 
-        public static function push($key, $value)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->push($key, $value);
-        }
-        
-        /**
-         * Increment the value of an item in the session.
-         *
-         * @param string $key
-         * @param int $amount
-         * @return mixed 
-         * @static 
-         */ 
-        public static function increment($key, $amount = 1)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->increment($key, $amount);
-        }
-        
-        /**
-         * Decrement the value of an item in the session.
-         *
-         * @param string $key
-         * @param int $amount
-         * @return int 
-         * @static 
-         */ 
-        public static function decrement($key, $amount = 1)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->decrement($key, $amount);
-        }
-        
-        /**
-         * Flash a key / value pair to the session.
-         *
-         * @param string $key
-         * @param mixed $value
-         * @return void 
-         * @static 
-         */ 
-        public static function flash($key, $value = true)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->flash($key, $value);
-        }
-        
-        /**
-         * Flash a key / value pair to the session for immediate use.
-         *
-         * @param string $key
-         * @param mixed $value
-         * @return void 
-         * @static 
-         */ 
-        public static function now($key, $value)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->now($key, $value);
-        }
-        
-        /**
-         * Reflash all of the session flash data.
-         *
-         * @return void 
-         * @static 
-         */ 
-        public static function reflash()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->reflash();
-        }
-        
-        /**
-         * Reflash a subset of the current flash data.
-         *
-         * @param array|mixed $keys
-         * @return void 
-         * @static 
-         */ 
-        public static function keep($keys = null)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->keep($keys);
-        }
-        
-        /**
-         * Flash an input array to the session.
-         *
-         * @param array $value
-         * @return void 
-         * @static 
-         */ 
-        public static function flashInput($value)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->flashInput($value);
-        }
-        
-        /**
-         * Remove an item from the session, returning its value.
-         *
-         * @param string $key
-         * @return mixed 
-         * @static 
-         */ 
-        public static function remove($key)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->remove($key);
-        }
-        
-        /**
-         * Remove one or many items from the session.
-         *
-         * @param string|array $keys
-         * @return void 
-         * @static 
-         */ 
-        public static function forget($keys)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->forget($keys);
-        }
-        
-        /**
-         * Remove all of the items from the session.
-         *
-         * @return void 
-         * @static 
-         */ 
-        public static function flush()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->flush();
-        }
-        
-        /**
-         * Flush the session data and regenerate the ID.
-         *
-         * @return bool 
-         * @static 
-         */ 
-        public static function invalidate()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->invalidate();
-        }
-        
-        /**
-         * Generate a new session identifier.
-         *
-         * @param bool $destroy
-         * @return bool 
-         * @static 
-         */ 
-        public static function regenerate($destroy = false)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->regenerate($destroy);
-        }
-        
-        /**
-         * Generate a new session ID for the session.
-         *
-         * @param bool $destroy
-         * @return bool 
-         * @static 
-         */ 
-        public static function migrate($destroy = false)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->migrate($destroy);
-        }
-        
-        /**
-         * Determine if the session has been started.
-         *
-         * @return bool 
-         * @static 
-         */ 
-        public static function isStarted()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->isStarted();
-        }
-        
-        /**
-         * Get the name of the session.
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getName()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->getName();
-        }
-        
-        /**
-         * Set the name of the session.
-         *
-         * @param string $name
-         * @return void 
-         * @static 
-         */ 
-        public static function setName($name)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->setName($name);
-        }
-        
-        /**
-         * Get the current session ID.
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getId()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->getId();
-        }
-        
-        /**
-         * Set the session ID.
-         *
-         * @param string $id
-         * @return void 
-         * @static 
-         */ 
-        public static function setId($id)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->setId($id);
-        }
-        
-        /**
-         * Determine if this is a valid session ID.
-         *
-         * @param string $id
-         * @return bool 
-         * @static 
-         */ 
-        public static function isValidId($id)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->isValidId($id);
-        }
-        
-        /**
-         * Set the existence of the session on the handler if applicable.
-         *
-         * @param bool $value
-         * @return void 
-         * @static 
-         */ 
-        public static function setExists($value)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->setExists($value);
-        }
-        
-        /**
-         * Get the CSRF token value.
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function token()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->token();
-        }
-        
-        /**
-         * Regenerate the CSRF token value.
-         *
-         * @return void 
-         * @static 
-         */ 
-        public static function regenerateToken()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->regenerateToken();
-        }
-        
-        /**
-         * Get the previous URL from the session.
-         *
-         * @return string|null 
-         * @static 
-         */ 
-        public static function previousUrl()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->previousUrl();
-        }
-        
-        /**
-         * Set the "previous" URL in the session.
-         *
-         * @param string $url
-         * @return void 
-         * @static 
-         */ 
-        public static function setPreviousUrl($url)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->setPreviousUrl($url);
-        }
-        
-        /**
-         * Get the underlying session handler implementation.
-         *
-         * @return \SessionHandlerInterface 
-         * @static 
-         */ 
-        public static function getHandler()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->getHandler();
-        }
-        
-        /**
-         * Determine if the session handler needs a request.
-         *
-         * @return bool 
-         * @static 
-         */ 
-        public static function handlerNeedsRequest()
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        return $instance->handlerNeedsRequest();
-        }
-        
-        /**
-         * Set the request on the handler instance.
-         *
-         * @param \Illuminate\Http\Request $request
-         * @return void 
-         * @static 
-         */ 
-        public static function setRequestOnHandler($request)
-        {
-                        /** @var \Illuminate\Session\Store $instance */
-                        $instance->setRequestOnHandler($request);
         }
          
     }
@@ -15858,1053 +15339,6 @@ namespace  {
 
     class Eloquent extends \Illuminate\Database\Eloquent\Model {         
             /**
-             * Create and return an un-saved model instance.
-             *
-             * @param array $attributes
-             * @return \Illuminate\Database\Eloquent\Model|static 
-             * @static 
-             */ 
-            public static function make($attributes = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->make($attributes);
-            }
-         
-            /**
-             * Register a new global scope.
-             *
-             * @param string $identifier
-             * @param \Illuminate\Database\Eloquent\Scope|\Closure $scope
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function withGlobalScope($identifier, $scope)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->withGlobalScope($identifier, $scope);
-            }
-         
-            /**
-             * Remove a registered global scope.
-             *
-             * @param \Illuminate\Database\Eloquent\Scope|string $scope
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function withoutGlobalScope($scope)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->withoutGlobalScope($scope);
-            }
-         
-            /**
-             * Remove all or passed registered global scopes.
-             *
-             * @param array|null $scopes
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function withoutGlobalScopes($scopes = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->withoutGlobalScopes($scopes);
-            }
-         
-            /**
-             * Get an array of global scopes that were removed from the query.
-             *
-             * @return array 
-             * @static 
-             */ 
-            public static function removedScopes()
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->removedScopes();
-            }
-         
-            /**
-             * Add a where clause on the primary key to the query.
-             *
-             * @param mixed $id
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function whereKey($id)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->whereKey($id);
-            }
-         
-            /**
-             * Add a where clause on the primary key to the query.
-             *
-             * @param mixed $id
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function whereKeyNot($id)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->whereKeyNot($id);
-            }
-         
-            /**
-             * Add a basic where clause to the query.
-             *
-             * @param \Closure|string|array $column
-             * @param mixed $operator
-             * @param mixed $value
-             * @param string $boolean
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function where($column, $operator = null, $value = null, $boolean = 'and')
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->where($column, $operator, $value, $boolean);
-            }
-         
-            /**
-             * Add a basic where clause to the query, and return the first result.
-             *
-             * @param \Closure|string|array $column
-             * @param mixed $operator
-             * @param mixed $value
-             * @param string $boolean
-             * @return \Illuminate\Database\Eloquent\Model|static 
-             * @static 
-             */ 
-            public static function firstWhere($column, $operator = null, $value = null, $boolean = 'and')
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->firstWhere($column, $operator, $value, $boolean);
-            }
-         
-            /**
-             * Add an "or where" clause to the query.
-             *
-             * @param \Closure|array|string $column
-             * @param mixed $operator
-             * @param mixed $value
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function orWhere($column, $operator = null, $value = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->orWhere($column, $operator, $value);
-            }
-         
-            /**
-             * Add an "order by" clause for a timestamp to the query.
-             *
-             * @param string $column
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function latest($column = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->latest($column);
-            }
-         
-            /**
-             * Add an "order by" clause for a timestamp to the query.
-             *
-             * @param string $column
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function oldest($column = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->oldest($column);
-            }
-         
-            /**
-             * Create a collection of models from plain arrays.
-             *
-             * @param array $items
-             * @return \Illuminate\Database\Eloquent\Collection 
-             * @static 
-             */ 
-            public static function hydrate($items)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->hydrate($items);
-            }
-         
-            /**
-             * Create a collection of models from a raw query.
-             *
-             * @param string $query
-             * @param array $bindings
-             * @return \Illuminate\Database\Eloquent\Collection 
-             * @static 
-             */ 
-            public static function fromQuery($query, $bindings = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->fromQuery($query, $bindings);
-            }
-         
-            /**
-             * Find a model by its primary key.
-             *
-             * @param mixed $id
-             * @param array $columns
-             * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection|static[]|static|null 
-             * @static 
-             */ 
-            public static function find($id, $columns = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->find($id, $columns);
-            }
-         
-            /**
-             * Find multiple models by their primary keys.
-             *
-             * @param \Illuminate\Contracts\Support\Arrayable|array $ids
-             * @param array $columns
-             * @return \Illuminate\Database\Eloquent\Collection 
-             * @static 
-             */ 
-            public static function findMany($ids, $columns = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->findMany($ids, $columns);
-            }
-         
-            /**
-             * Find a model by its primary key or throw an exception.
-             *
-             * @param mixed $id
-             * @param array $columns
-             * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection|static|static[] 
-             * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
-             * @static 
-             */ 
-            public static function findOrFail($id, $columns = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->findOrFail($id, $columns);
-            }
-         
-            /**
-             * Find a model by its primary key or return fresh model instance.
-             *
-             * @param mixed $id
-             * @param array $columns
-             * @return \Illuminate\Database\Eloquent\Model|static 
-             * @static 
-             */ 
-            public static function findOrNew($id, $columns = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->findOrNew($id, $columns);
-            }
-         
-            /**
-             * Get the first record matching the attributes or instantiate it.
-             *
-             * @param array $attributes
-             * @param array $values
-             * @return \Illuminate\Database\Eloquent\Model|static 
-             * @static 
-             */ 
-            public static function firstOrNew($attributes, $values = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->firstOrNew($attributes, $values);
-            }
-         
-            /**
-             * Get the first record matching the attributes or create it.
-             *
-             * @param array $attributes
-             * @param array $values
-             * @return \Illuminate\Database\Eloquent\Model|static 
-             * @static 
-             */ 
-            public static function firstOrCreate($attributes, $values = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->firstOrCreate($attributes, $values);
-            }
-         
-            /**
-             * Create or update a record matching the attributes, and fill it with values.
-             *
-             * @param array $attributes
-             * @param array $values
-             * @return \Illuminate\Database\Eloquent\Model|static 
-             * @static 
-             */ 
-            public static function updateOrCreate($attributes, $values = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->updateOrCreate($attributes, $values);
-            }
-         
-            /**
-             * Execute the query and get the first result or throw an exception.
-             *
-             * @param array $columns
-             * @return \Illuminate\Database\Eloquent\Model|static 
-             * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
-             * @static 
-             */ 
-            public static function firstOrFail($columns = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->firstOrFail($columns);
-            }
-         
-            /**
-             * Execute the query and get the first result or call a callback.
-             *
-             * @param \Closure|array $columns
-             * @param \Closure|null $callback
-             * @return \Illuminate\Database\Eloquent\Model|static|mixed 
-             * @static 
-             */ 
-            public static function firstOr($columns = [], $callback = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->firstOr($columns, $callback);
-            }
-         
-            /**
-             * Get a single column's value from the first result of a query.
-             *
-             * @param string $column
-             * @return mixed 
-             * @static 
-             */ 
-            public static function value($column)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->value($column);
-            }
-         
-            /**
-             * Execute the query as a "select" statement.
-             *
-             * @param array|string $columns
-             * @return \Illuminate\Database\Eloquent\Collection|static[] 
-             * @static 
-             */ 
-            public static function get($columns = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->get($columns);
-            }
-         
-            /**
-             * Get the hydrated models without eager loading.
-             *
-             * @param array|string $columns
-             * @return \Illuminate\Database\Eloquent\Model[]|static[] 
-             * @static 
-             */ 
-            public static function getModels($columns = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->getModels($columns);
-            }
-         
-            /**
-             * Eager load the relationships for the models.
-             *
-             * @param array $models
-             * @return array 
-             * @static 
-             */ 
-            public static function eagerLoadRelations($models)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->eagerLoadRelations($models);
-            }
-         
-            /**
-             * Get a lazy collection for the given query.
-             *
-             * @return \Illuminate\Support\LazyCollection 
-             * @static 
-             */ 
-            public static function cursor()
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->cursor();
-            }
-         
-            /**
-             * Get an array with the values of a given column.
-             *
-             * @param string $column
-             * @param string|null $key
-             * @return \Illuminate\Support\Collection 
-             * @static 
-             */ 
-            public static function pluck($column, $key = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->pluck($column, $key);
-            }
-         
-            /**
-             * Paginate the given query.
-             *
-             * @param int|null $perPage
-             * @param array $columns
-             * @param string $pageName
-             * @param int|null $page
-             * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator 
-             * @throws \InvalidArgumentException
-             * @static 
-             */ 
-            public static function paginate($perPage = null, $columns = [], $pageName = 'page', $page = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->paginate($perPage, $columns, $pageName, $page);
-            }
-         
-            /**
-             * Paginate the given query into a simple paginator.
-             *
-             * @param int|null $perPage
-             * @param array $columns
-             * @param string $pageName
-             * @param int|null $page
-             * @return \Illuminate\Contracts\Pagination\Paginator 
-             * @static 
-             */ 
-            public static function simplePaginate($perPage = null, $columns = [], $pageName = 'page', $page = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->simplePaginate($perPage, $columns, $pageName, $page);
-            }
-         
-            /**
-             * Save a new model and return the instance.
-             *
-             * @param array $attributes
-             * @return \Illuminate\Database\Eloquent\Model|$this 
-             * @static 
-             */ 
-            public static function create($attributes = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->create($attributes);
-            }
-         
-            /**
-             * Save a new model and return the instance. Allow mass-assignment.
-             *
-             * @param array $attributes
-             * @return \Illuminate\Database\Eloquent\Model|$this 
-             * @static 
-             */ 
-            public static function forceCreate($attributes)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->forceCreate($attributes);
-            }
-         
-            /**
-             * Register a replacement for the default delete function.
-             *
-             * @param \Closure $callback
-             * @return void 
-             * @static 
-             */ 
-            public static function onDelete($callback)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                $instance->onDelete($callback);
-            }
-         
-            /**
-             * Call the given local model scopes.
-             *
-             * @param array|string $scopes
-             * @return static|mixed 
-             * @static 
-             */ 
-            public static function scopes($scopes)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->scopes($scopes);
-            }
-         
-            /**
-             * Apply the scopes to the Eloquent builder instance and return it.
-             *
-             * @return static 
-             * @static 
-             */ 
-            public static function applyScopes()
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->applyScopes();
-            }
-         
-            /**
-             * Prevent the specified relations from being eager loaded.
-             *
-             * @param mixed $relations
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function without($relations)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->without($relations);
-            }
-         
-            /**
-             * Create a new instance of the model being queried.
-             *
-             * @param array $attributes
-             * @return \Illuminate\Database\Eloquent\Model|static 
-             * @static 
-             */ 
-            public static function newModelInstance($attributes = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->newModelInstance($attributes);
-            }
-         
-            /**
-             * Get the underlying query builder instance.
-             *
-             * @return \Illuminate\Database\Query\Builder 
-             * @static 
-             */ 
-            public static function getQuery()
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->getQuery();
-            }
-         
-            /**
-             * Set the underlying query builder instance.
-             *
-             * @param \Illuminate\Database\Query\Builder $query
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function setQuery($query)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->setQuery($query);
-            }
-         
-            /**
-             * Get a base query builder instance.
-             *
-             * @return \Illuminate\Database\Query\Builder 
-             * @static 
-             */ 
-            public static function toBase()
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->toBase();
-            }
-         
-            /**
-             * Get the relationships being eagerly loaded.
-             *
-             * @return array 
-             * @static 
-             */ 
-            public static function getEagerLoads()
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->getEagerLoads();
-            }
-         
-            /**
-             * Set the relationships being eagerly loaded.
-             *
-             * @param array $eagerLoad
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function setEagerLoads($eagerLoad)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->setEagerLoads($eagerLoad);
-            }
-         
-            /**
-             * Get the model instance being queried.
-             *
-             * @return \Illuminate\Database\Eloquent\Model|static 
-             * @static 
-             */ 
-            public static function getModel()
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->getModel();
-            }
-         
-            /**
-             * Set a model instance for the model being queried.
-             *
-             * @param \Illuminate\Database\Eloquent\Model $model
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function setModel($model)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->setModel($model);
-            }
-         
-            /**
-             * Get the given macro by name.
-             *
-             * @param string $name
-             * @return \Closure 
-             * @static 
-             */ 
-            public static function getMacro($name)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->getMacro($name);
-            }
-         
-            /**
-             * Checks if a macro is registered.
-             *
-             * @param string $name
-             * @return bool 
-             * @static 
-             */ 
-            public static function hasMacro($name)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->hasMacro($name);
-            }
-         
-            /**
-             * Get the given global macro by name.
-             *
-             * @param string $name
-             * @return \Closure 
-             * @static 
-             */ 
-            public static function getGlobalMacro($name)
-            {
-                                return \Illuminate\Database\Eloquent\Builder::getGlobalMacro($name);
-            }
-         
-            /**
-             * Checks if a global macro is registered.
-             *
-             * @param string $name
-             * @return bool 
-             * @static 
-             */ 
-            public static function hasGlobalMacro($name)
-            {
-                                return \Illuminate\Database\Eloquent\Builder::hasGlobalMacro($name);
-            }
-         
-            /**
-             * Chunk the results of the query.
-             *
-             * @param int $count
-             * @param callable $callback
-             * @return bool 
-             * @static 
-             */ 
-            public static function chunk($count, $callback)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->chunk($count, $callback);
-            }
-         
-            /**
-             * Execute a callback over each item while chunking.
-             *
-             * @param callable $callback
-             * @param int $count
-             * @return bool 
-             * @static 
-             */ 
-            public static function each($callback, $count = 1000)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->each($callback, $count);
-            }
-         
-            /**
-             * Chunk the results of a query by comparing IDs.
-             *
-             * @param int $count
-             * @param callable $callback
-             * @param string|null $column
-             * @param string|null $alias
-             * @return bool 
-             * @static 
-             */ 
-            public static function chunkById($count, $callback, $column = null, $alias = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->chunkById($count, $callback, $column, $alias);
-            }
-         
-            /**
-             * Execute a callback over each item while chunking by id.
-             *
-             * @param callable $callback
-             * @param int $count
-             * @param string|null $column
-             * @param string|null $alias
-             * @return bool 
-             * @static 
-             */ 
-            public static function eachById($callback, $count = 1000, $column = null, $alias = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->eachById($callback, $count, $column, $alias);
-            }
-         
-            /**
-             * Execute the query and get the first result.
-             *
-             * @param array|string $columns
-             * @return \Illuminate\Database\Eloquent\Model|object|static|null 
-             * @static 
-             */ 
-            public static function first($columns = [])
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->first($columns);
-            }
-         
-            /**
-             * Apply the callback's query changes if the given "value" is true.
-             *
-             * @param mixed $value
-             * @param callable $callback
-             * @param callable|null $default
-             * @return mixed|$this 
-             * @static 
-             */ 
-            public static function when($value, $callback, $default = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->when($value, $callback, $default);
-            }
-         
-            /**
-             * Pass the query to a given callback.
-             *
-             * @param callable $callback
-             * @return \Illuminate\Database\Query\Builder 
-             * @static 
-             */ 
-            public static function tap($callback)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->tap($callback);
-            }
-         
-            /**
-             * Apply the callback's query changes if the given "value" is false.
-             *
-             * @param mixed $value
-             * @param callable $callback
-             * @param callable|null $default
-             * @return mixed|$this 
-             * @static 
-             */ 
-            public static function unless($value, $callback, $default = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->unless($value, $callback, $default);
-            }
-         
-            /**
-             * Add a relationship count / exists condition to the query.
-             *
-             * @param \Illuminate\Database\Eloquent\Relations\Relation|string $relation
-             * @param string $operator
-             * @param int $count
-             * @param string $boolean
-             * @param \Closure|null $callback
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @throws \RuntimeException
-             * @static 
-             */ 
-            public static function has($relation, $operator = '>=', $count = 1, $boolean = 'and', $callback = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->has($relation, $operator, $count, $boolean, $callback);
-            }
-         
-            /**
-             * Add a relationship count / exists condition to the query with an "or".
-             *
-             * @param string $relation
-             * @param string $operator
-             * @param int $count
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function orHas($relation, $operator = '>=', $count = 1)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->orHas($relation, $operator, $count);
-            }
-         
-            /**
-             * Add a relationship count / exists condition to the query.
-             *
-             * @param string $relation
-             * @param string $boolean
-             * @param \Closure|null $callback
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function doesntHave($relation, $boolean = 'and', $callback = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->doesntHave($relation, $boolean, $callback);
-            }
-         
-            /**
-             * Add a relationship count / exists condition to the query with an "or".
-             *
-             * @param string $relation
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function orDoesntHave($relation)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->orDoesntHave($relation);
-            }
-         
-            /**
-             * Add a relationship count / exists condition to the query with where clauses.
-             *
-             * @param string $relation
-             * @param \Closure|null $callback
-             * @param string $operator
-             * @param int $count
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function whereHas($relation, $callback = null, $operator = '>=', $count = 1)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->whereHas($relation, $callback, $operator, $count);
-            }
-         
-            /**
-             * Add a relationship count / exists condition to the query with where clauses and an "or".
-             *
-             * @param string $relation
-             * @param \Closure $callback
-             * @param string $operator
-             * @param int $count
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function orWhereHas($relation, $callback = null, $operator = '>=', $count = 1)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->orWhereHas($relation, $callback, $operator, $count);
-            }
-         
-            /**
-             * Add a relationship count / exists condition to the query with where clauses.
-             *
-             * @param string $relation
-             * @param \Closure|null $callback
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function whereDoesntHave($relation, $callback = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->whereDoesntHave($relation, $callback);
-            }
-         
-            /**
-             * Add a relationship count / exists condition to the query with where clauses and an "or".
-             *
-             * @param string $relation
-             * @param \Closure $callback
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function orWhereDoesntHave($relation, $callback = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->orWhereDoesntHave($relation, $callback);
-            }
-         
-            /**
-             * Add a polymorphic relationship count / exists condition to the query.
-             *
-             * @param string $relation
-             * @param string|array $types
-             * @param string $operator
-             * @param int $count
-             * @param string $boolean
-             * @param \Closure|null $callback
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function hasMorph($relation, $types, $operator = '>=', $count = 1, $boolean = 'and', $callback = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->hasMorph($relation, $types, $operator, $count, $boolean, $callback);
-            }
-         
-            /**
-             * Add a polymorphic relationship count / exists condition to the query with an "or".
-             *
-             * @param string $relation
-             * @param string|array $types
-             * @param string $operator
-             * @param int $count
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function orHasMorph($relation, $types, $operator = '>=', $count = 1)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->orHasMorph($relation, $types, $operator, $count);
-            }
-         
-            /**
-             * Add a polymorphic relationship count / exists condition to the query.
-             *
-             * @param string $relation
-             * @param string|array $types
-             * @param string $boolean
-             * @param \Closure|null $callback
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function doesntHaveMorph($relation, $types, $boolean = 'and', $callback = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->doesntHaveMorph($relation, $types, $boolean, $callback);
-            }
-         
-            /**
-             * Add a polymorphic relationship count / exists condition to the query with an "or".
-             *
-             * @param string $relation
-             * @param string|array $types
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function orDoesntHaveMorph($relation, $types)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->orDoesntHaveMorph($relation, $types);
-            }
-         
-            /**
-             * Add a polymorphic relationship count / exists condition to the query with where clauses.
-             *
-             * @param string $relation
-             * @param string|array $types
-             * @param \Closure|null $callback
-             * @param string $operator
-             * @param int $count
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function whereHasMorph($relation, $types, $callback = null, $operator = '>=', $count = 1)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->whereHasMorph($relation, $types, $callback, $operator, $count);
-            }
-         
-            /**
-             * Add a polymorphic relationship count / exists condition to the query with where clauses and an "or".
-             *
-             * @param string $relation
-             * @param string|array $types
-             * @param \Closure $callback
-             * @param string $operator
-             * @param int $count
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function orWhereHasMorph($relation, $types, $callback = null, $operator = '>=', $count = 1)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->orWhereHasMorph($relation, $types, $callback, $operator, $count);
-            }
-         
-            /**
-             * Add a polymorphic relationship count / exists condition to the query with where clauses.
-             *
-             * @param string $relation
-             * @param string|array $types
-             * @param \Closure|null $callback
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function whereDoesntHaveMorph($relation, $types, $callback = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->whereDoesntHaveMorph($relation, $types, $callback);
-            }
-         
-            /**
-             * Add a polymorphic relationship count / exists condition to the query with where clauses and an "or".
-             *
-             * @param string $relation
-             * @param string|array $types
-             * @param \Closure $callback
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function orWhereDoesntHaveMorph($relation, $types, $callback = null)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->orWhereDoesntHaveMorph($relation, $types, $callback);
-            }
-         
-            /**
-             * Add subselect queries to count the relations.
-             *
-             * @param mixed $relations
-             * @return \Illuminate\Database\Eloquent\Builder 
-             * @static 
-             */ 
-            public static function withCount($relations)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->withCount($relations);
-            }
-         
-            /**
-             * Merge the where constraints from another query to the current query.
-             *
-             * @param \Illuminate\Database\Eloquent\Builder $from
-             * @return \Illuminate\Database\Eloquent\Builder|static 
-             * @static 
-             */ 
-            public static function mergeConstraintsFrom($from)
-            {
-                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
-                                return $instance->mergeConstraintsFrom($from);
-            }
-         
-            /**
              * Set the columns to be selected.
              *
              * @param array|mixed $columns
@@ -17198,6 +15632,22 @@ namespace  {
             }
          
             /**
+             * Add a basic where clause to the query.
+             *
+             * @param \Closure|string|array $column
+             * @param mixed $operator
+             * @param mixed $value
+             * @param string $boolean
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function where($column, $operator = null, $value = null, $boolean = 'and')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->where($column, $operator, $value, $boolean);
+            }
+         
+            /**
              * Prepare the value and operator for a where clause.
              *
              * @param string $value
@@ -17211,6 +15661,21 @@ namespace  {
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->prepareValueAndOperator($value, $operator, $useDefault);
+            }
+         
+            /**
+             * Add an "or where" clause to the query.
+             *
+             * @param \Closure|string|array $column
+             * @param mixed $operator
+             * @param mixed $value
+             * @return \Illuminate\Database\Query\Builder|static 
+             * @static 
+             */ 
+            public static function orWhere($column, $operator = null, $value = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orWhere($column, $operator, $value);
             }
          
             /**
@@ -17997,6 +16462,32 @@ namespace  {
             }
          
             /**
+             * Add an "order by" clause for a timestamp to the query.
+             *
+             * @param string $column
+             * @return \Illuminate\Database\Query\Builder|static 
+             * @static 
+             */ 
+            public static function latest($column = 'created_at')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->latest($column);
+            }
+         
+            /**
+             * Add an "order by" clause for a timestamp to the query.
+             *
+             * @param string $column
+             * @return \Illuminate\Database\Query\Builder|static 
+             * @static 
+             */ 
+            public static function oldest($column = 'created_at')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->oldest($column);
+            }
+         
+            /**
              * Put the query's results in random order.
              *
              * @param string $seed
@@ -18196,6 +16687,80 @@ namespace  {
             }
          
             /**
+             * Execute a query for a single record by ID.
+             *
+             * @param int|string $id
+             * @param array $columns
+             * @return mixed|static 
+             * @static 
+             */ 
+            public static function find($id, $columns = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->find($id, $columns);
+            }
+         
+            /**
+             * Get a single column's value from the first result of a query.
+             *
+             * @param string $column
+             * @return mixed 
+             * @static 
+             */ 
+            public static function value($column)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->value($column);
+            }
+         
+            /**
+             * Execute the query as a "select" statement.
+             *
+             * @param array|string $columns
+             * @return \Illuminate\Support\Collection 
+             * @static 
+             */ 
+            public static function get($columns = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->get($columns);
+            }
+         
+            /**
+             * Paginate the given query into a simple paginator.
+             *
+             * @param int $perPage
+             * @param array $columns
+             * @param string $pageName
+             * @param int|null $page
+             * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator 
+             * @static 
+             */ 
+            public static function paginate($perPage = 15, $columns = [], $pageName = 'page', $page = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->paginate($perPage, $columns, $pageName, $page);
+            }
+         
+            /**
+             * Get a paginator only supporting simple next and previous links.
+             * 
+             * This is more efficient on larger data-sets, etc.
+             *
+             * @param int $perPage
+             * @param array $columns
+             * @param string $pageName
+             * @param int|null $page
+             * @return \Illuminate\Contracts\Pagination\Paginator 
+             * @static 
+             */ 
+            public static function simplePaginate($perPage = 15, $columns = [], $pageName = 'page', $page = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->simplePaginate($perPage, $columns, $pageName, $page);
+            }
+         
+            /**
              * Get the count of the total records for the paginator.
              *
              * @param array $columns
@@ -18206,6 +16771,32 @@ namespace  {
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->getCountForPagination($columns);
+            }
+         
+            /**
+             * Get a lazy collection for the given query.
+             *
+             * @return \Illuminate\Support\LazyCollection 
+             * @static 
+             */ 
+            public static function cursor()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->cursor();
+            }
+         
+            /**
+             * Get an array with the values of a given column.
+             *
+             * @param string $column
+             * @param string|null $key
+             * @return \Illuminate\Support\Collection 
+             * @static 
+             */ 
+            public static function pluck($column, $key = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->pluck($column, $key);
             }
          
             /**
@@ -18625,6 +17216,122 @@ namespace  {
             }
          
             /**
+             * Chunk the results of the query.
+             *
+             * @param int $count
+             * @param callable $callback
+             * @return bool 
+             * @static 
+             */ 
+            public static function chunk($count, $callback)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->chunk($count, $callback);
+            }
+         
+            /**
+             * Execute a callback over each item while chunking.
+             *
+             * @param callable $callback
+             * @param int $count
+             * @return bool 
+             * @static 
+             */ 
+            public static function each($callback, $count = 1000)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->each($callback, $count);
+            }
+         
+            /**
+             * Chunk the results of a query by comparing IDs.
+             *
+             * @param int $count
+             * @param callable $callback
+             * @param string|null $column
+             * @param string|null $alias
+             * @return bool 
+             * @static 
+             */ 
+            public static function chunkById($count, $callback, $column = null, $alias = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->chunkById($count, $callback, $column, $alias);
+            }
+         
+            /**
+             * Execute a callback over each item while chunking by id.
+             *
+             * @param callable $callback
+             * @param int $count
+             * @param string|null $column
+             * @param string|null $alias
+             * @return bool 
+             * @static 
+             */ 
+            public static function eachById($callback, $count = 1000, $column = null, $alias = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->eachById($callback, $count, $column, $alias);
+            }
+         
+            /**
+             * Execute the query and get the first result.
+             *
+             * @param array|string $columns
+             * @return \Illuminate\Database\Eloquent\Model|object|static|null 
+             * @static 
+             */ 
+            public static function first($columns = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->first($columns);
+            }
+         
+            /**
+             * Apply the callback's query changes if the given "value" is true.
+             *
+             * @param mixed $value
+             * @param callable $callback
+             * @param callable|null $default
+             * @return mixed|$this 
+             * @static 
+             */ 
+            public static function when($value, $callback, $default = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->when($value, $callback, $default);
+            }
+         
+            /**
+             * Pass the query to a given callback.
+             *
+             * @param callable $callback
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function tap($callback)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->tap($callback);
+            }
+         
+            /**
+             * Apply the callback's query changes if the given "value" is false.
+             *
+             * @param mixed $value
+             * @param callable $callback
+             * @param callable|null $default
+             * @return mixed|$this 
+             * @static 
+             */ 
+            public static function unless($value, $callback, $default = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->unless($value, $callback, $default);
+            }
+         
+            /**
              * Register a custom macro.
              *
              * @param string $name
@@ -18649,6 +17356,18 @@ namespace  {
             public static function mixin($mixin, $replace = true)
             {
                                 \Illuminate\Database\Query\Builder::mixin($mixin, $replace);
+            }
+         
+            /**
+             * Checks if macro is registered.
+             *
+             * @param string $name
+             * @return bool 
+             * @static 
+             */ 
+            public static function hasMacro($name)
+            {
+                                return \Illuminate\Database\Query\Builder::hasMacro($name);
             }
          
             /**
@@ -18718,5 +17437,581 @@ namespace  {
 }
 
 
+namespace {
 
+
+use Illuminate\Contracts\Support\Htmlable;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Env;
+use Illuminate\Support\HigherOrderTapProxy;
+use Illuminate\Support\Optional;
+
+if (! function_exists('append_config')) {
+    /**
+     * Assign high numeric IDs to a config item to force appending.
+     *
+     * @param  array  $array
+     * @return array
+     */
+    function append_config(array $array)
+    {
+        $start = 9999;
+
+        foreach ($array as $key => $value) {
+            if (is_numeric($key)) {
+                $start++;
+
+                $array[$start] = Arr::pull($array, $key);
+            }
+        }
+
+        return $array;
+    }
+}
+
+if (! function_exists('blank')) {
+    /**
+     * Determine if the given value is "blank".
+     *
+     * @param  mixed  $value
+     * @return bool
+     */
+    function blank($value)
+    {
+        if (is_null($value)) {
+            return true;
+        }
+
+        if (is_string($value)) {
+            return trim($value) === '';
+        }
+
+        if (is_numeric($value) || is_bool($value)) {
+            return false;
+        }
+
+        if ($value instanceof Countable) {
+            return count($value) === 0;
+        }
+
+        return empty($value);
+    }
+}
+
+if (! function_exists('class_basename')) {
+    /**
+     * Get the class "basename" of the given object / class.
+     *
+     * @param  string|object  $class
+     * @return string
+     */
+    function class_basename($class)
+    {
+        $class = is_object($class) ? get_class($class) : $class;
+
+        return basename(str_replace('\\', '/', $class));
+    }
+}
+
+if (! function_exists('class_uses_recursive')) {
+    /**
+     * Returns all traits used by a class, its parent classes and trait of their traits.
+     *
+     * @param  object|string  $class
+     * @return array
+     */
+    function class_uses_recursive($class)
+    {
+        if (is_object($class)) {
+            $class = get_class($class);
+        }
+
+        $results = [];
+
+        foreach (array_reverse(class_parents($class)) + [$class => $class] as $class) {
+            $results += trait_uses_recursive($class);
+        }
+
+        return array_unique($results);
+    }
+}
+
+if (! function_exists('collect')) {
+    /**
+     * Create a collection from the given value.
+     *
+     * @param  mixed  $value
+     * @return \Illuminate\Support\Collection
+     */
+    function collect($value = null)
+    {
+        return new Collection($value);
+    }
+}
+
+if (! function_exists('data_fill')) {
+    /**
+     * Fill in data where it's missing.
+     *
+     * @param  mixed  $target
+     * @param  string|array  $key
+     * @param  mixed  $value
+     * @return mixed
+     */
+    function data_fill(&$target, $key, $value)
+    {
+        return data_set($target, $key, $value, false);
+    }
+}
+
+if (! function_exists('data_get')) {
+    /**
+     * Get an item from an array or object using "dot" notation.
+     *
+     * @param  mixed  $target
+     * @param  string|array|int  $key
+     * @param  mixed  $default
+     * @return mixed
+     */
+    function data_get($target, $key, $default = null)
+    {
+        if (is_null($key)) {
+            return $target;
+        }
+
+        $key = is_array($key) ? $key : explode('.', $key);
+
+        while (! is_null($segment = array_shift($key))) {
+            if ($segment === '*') {
+                if ($target instanceof Collection) {
+                    $target = $target->all();
+                } elseif (! is_array($target)) {
+                    return value($default);
+                }
+
+                $result = [];
+
+                foreach ($target as $item) {
+                    $result[] = data_get($item, $key);
+                }
+
+                return in_array('*', $key) ? Arr::collapse($result) : $result;
+            }
+
+            if (Arr::accessible($target) && Arr::exists($target, $segment)) {
+                $target = $target[$segment];
+            } elseif (is_object($target) && isset($target->{$segment})) {
+                $target = $target->{$segment};
+            } else {
+                return value($default);
+            }
+        }
+
+        return $target;
+    }
+}
+
+if (! function_exists('data_set')) {
+    /**
+     * Set an item on an array or object using dot notation.
+     *
+     * @param  mixed  $target
+     * @param  string|array  $key
+     * @param  mixed  $value
+     * @param  bool  $overwrite
+     * @return mixed
+     */
+    function data_set(&$target, $key, $value, $overwrite = true)
+    {
+        $segments = is_array($key) ? $key : explode('.', $key);
+
+        if (($segment = array_shift($segments)) === '*') {
+            if (! Arr::accessible($target)) {
+                $target = [];
+            }
+
+            if ($segments) {
+                foreach ($target as &$inner) {
+                    data_set($inner, $segments, $value, $overwrite);
+                }
+            } elseif ($overwrite) {
+                foreach ($target as &$inner) {
+                    $inner = $value;
+                }
+            }
+        } elseif (Arr::accessible($target)) {
+            if ($segments) {
+                if (! Arr::exists($target, $segment)) {
+                    $target[$segment] = [];
+                }
+
+                data_set($target[$segment], $segments, $value, $overwrite);
+            } elseif ($overwrite || ! Arr::exists($target, $segment)) {
+                $target[$segment] = $value;
+            }
+        } elseif (is_object($target)) {
+            if ($segments) {
+                if (! isset($target->{$segment})) {
+                    $target->{$segment} = [];
+                }
+
+                data_set($target->{$segment}, $segments, $value, $overwrite);
+            } elseif ($overwrite || ! isset($target->{$segment})) {
+                $target->{$segment} = $value;
+            }
+        } else {
+            $target = [];
+
+            if ($segments) {
+                data_set($target[$segment], $segments, $value, $overwrite);
+            } elseif ($overwrite) {
+                $target[$segment] = $value;
+            }
+        }
+
+        return $target;
+    }
+}
+
+if (! function_exists('e')) {
+    /**
+     * Encode HTML special characters in a string.
+     *
+     * @param  \Illuminate\Contracts\Support\Htmlable|string  $value
+     * @param  bool  $doubleEncode
+     * @return string
+     */
+    function e($value, $doubleEncode = true)
+    {
+        if ($value instanceof Htmlable) {
+            return $value->toHtml();
+        }
+
+        return htmlspecialchars($value, ENT_QUOTES, 'UTF-8', $doubleEncode);
+    }
+}
+
+if (! function_exists('env')) {
+    /**
+     * Gets the value of an environment variable.
+     *
+     * @param  string  $key
+     * @param  mixed  $default
+     * @return mixed
+     */
+    function env($key, $default = null)
+    {
+        return Env::get($key, $default);
+    }
+}
+
+if (! function_exists('filled')) {
+    /**
+     * Determine if a value is "filled".
+     *
+     * @param  mixed  $value
+     * @return bool
+     */
+    function filled($value)
+    {
+        return ! blank($value);
+    }
+}
+
+if (! function_exists('head')) {
+    /**
+     * Get the first element of an array. Useful for method chaining.
+     *
+     * @param  array  $array
+     * @return mixed
+     */
+    function head($array)
+    {
+        return reset($array);
+    }
+}
+
+if (! function_exists('last')) {
+    /**
+     * Get the last element from an array.
+     *
+     * @param  array  $array
+     * @return mixed
+     */
+    function last($array)
+    {
+        return end($array);
+    }
+}
+
+if (! function_exists('object_get')) {
+    /**
+     * Get an item from an object using "dot" notation.
+     *
+     * @param  object  $object
+     * @param  string  $key
+     * @param  mixed  $default
+     * @return mixed
+     */
+    function object_get($object, $key, $default = null)
+    {
+        if (is_null($key) || trim($key) == '') {
+            return $object;
+        }
+
+        foreach (explode('.', $key) as $segment) {
+            if (! is_object($object) || ! isset($object->{$segment})) {
+                return value($default);
+            }
+
+            $object = $object->{$segment};
+        }
+
+        return $object;
+    }
+}
+
+if (! function_exists('optional')) {
+    /**
+     * Provide access to optional objects.
+     *
+     * @param  mixed  $value
+     * @param  callable|null  $callback
+     * @return mixed
+     */
+    function optional($value = null, callable $callback = null)
+    {
+        if (is_null($callback)) {
+            return new Optional($value);
+        } elseif (! is_null($value)) {
+            return $callback($value);
+        }
+    }
+}
+
+if (! function_exists('preg_replace_array')) {
+    /**
+     * Replace a given pattern with each value in the array in sequentially.
+     *
+     * @param  string  $pattern
+     * @param  array  $replacements
+     * @param  string  $subject
+     * @return string
+     */
+    function preg_replace_array($pattern, array $replacements, $subject)
+    {
+        return preg_replace_callback($pattern, function () use (&$replacements) {
+            foreach ($replacements as $key => $value) {
+                return array_shift($replacements);
+            }
+        }, $subject);
+    }
+}
+
+if (! function_exists('retry')) {
+    /**
+     * Retry an operation a given number of times.
+     *
+     * @param  int  $times
+     * @param  callable  $callback
+     * @param  int  $sleep
+     * @param  callable  $when
+     * @return mixed
+     *
+     * @throws \Exception
+     */
+    function retry($times, callable $callback, $sleep = 0, $when = null)
+    {
+        $attempts = 0;
+
+        beginning:
+        $attempts++;
+        $times--;
+
+        try {
+            return $callback($attempts);
+        } catch (Exception $e) {
+            if ($times < 1 || ($when && ! $when($e))) {
+                throw $e;
+            }
+
+            if ($sleep) {
+                usleep($sleep * 1000);
+            }
+
+            goto beginning;
+        }
+    }
+}
+
+if (! function_exists('tap')) {
+    /**
+     * Call the given Closure with the given value then return the value.
+     *
+     * @param  mixed  $value
+     * @param  callable|null  $callback
+     * @return mixed
+     */
+    function tap($value, $callback = null)
+    {
+        if (is_null($callback)) {
+            return new HigherOrderTapProxy($value);
+        }
+
+        $callback($value);
+
+        return $value;
+    }
+}
+
+if (! function_exists('throw_if')) {
+    /**
+     * Throw the given exception if the given condition is true.
+     *
+     * @param  mixed  $condition
+     * @param  \Throwable|string  $exception
+     * @param  array  ...$parameters
+     * @return mixed
+     *
+     * @throws \Throwable
+     */
+    function throw_if($condition, $exception, ...$parameters)
+    {
+        if ($condition) {
+            throw (is_string($exception) ? new $exception(...$parameters) : $exception);
+        }
+
+        return $condition;
+    }
+}
+
+if (! function_exists('throw_unless')) {
+    /**
+     * Throw the given exception unless the given condition is true.
+     *
+     * @param  mixed  $condition
+     * @param  \Throwable|string  $exception
+     * @param  array  ...$parameters
+     * @return mixed
+     *
+     * @throws \Throwable
+     */
+    function throw_unless($condition, $exception, ...$parameters)
+    {
+        if (! $condition) {
+            throw (is_string($exception) ? new $exception(...$parameters) : $exception);
+        }
+
+        return $condition;
+    }
+}
+
+if (! function_exists('trait_uses_recursive')) {
+    /**
+     * Returns all traits used by a trait and its traits.
+     *
+     * @param  string  $trait
+     * @return array
+     */
+    function trait_uses_recursive($trait)
+    {
+        $traits = class_uses($trait);
+
+        foreach ($traits as $trait) {
+            $traits += trait_uses_recursive($trait);
+        }
+
+        return $traits;
+    }
+}
+
+if (! function_exists('transform')) {
+    /**
+     * Transform the given value if it is present.
+     *
+     * @param  mixed  $value
+     * @param  callable  $callback
+     * @param  mixed  $default
+     * @return mixed|null
+     */
+    function transform($value, callable $callback, $default = null)
+    {
+        if (filled($value)) {
+            return $callback($value);
+        }
+
+        if (is_callable($default)) {
+            return $default($value);
+        }
+
+        return $default;
+    }
+}
+
+if (! function_exists('value')) {
+    /**
+     * Return the default value of the given value.
+     *
+     * @param  mixed  $value
+     * @return mixed
+     */
+    function value($value)
+    {
+        return $value instanceof Closure ? $value() : $value;
+    }
+}
+
+if (! function_exists('windows_os')) {
+    /**
+     * Determine whether the current environment is Windows based.
+     *
+     * @return bool
+     */
+    function windows_os()
+    {
+        return PHP_OS_FAMILY === 'Windows';
+    }
+}
+
+if (! function_exists('with')) {
+    /**
+     * Return the given value, optionally passed through the given callback.
+     *
+     * @param  mixed  $value
+     * @param  callable|null  $callback
+     * @return mixed
+     */
+    function with($value, callable $callback = null)
+    {
+        return is_null($callback) ? $value : $callback($value);
+    }
+}
+ 
+}
+
+namespace Illuminate\Support {
+    /**
+     * Methods commonly used in migrations
+     *
+     * @method Fluent after(string $column) Add the after modifier
+     * @method Fluent charset(string $charset) Add the character set modifier
+     * @method Fluent collation(string $collation) Add the collation modifier
+     * @method Fluent comment(string $comment) Add comment
+     * @method Fluent default($value) Add the default modifier
+     * @method Fluent first() Select first row
+     * @method Fluent index(string $name = null) Add the in dex clause
+     * @method Fluent on(string $table) `on` of a foreign key
+     * @method Fluent onDelete(string $action) `on delete` of a foreign key
+     * @method Fluent onUpdate(string $action) `on update` of a foreign key
+     * @method Fluent primary() Add the primary key modifier
+     * @method Fluent references(string $column) `references` of a foreign key
+     * @method Fluent nullable(bool $value = true) Add the nullable modifier
+     * @method Fluent unique(string $name = null) Add unique index clause
+     * @method Fluent unsigned() Add the unsigned modifier
+     * @method Fluent useCurrent() Add the default timestamp value
+     * @method Fluent change() Add the change modifier
+     */
+    class Fluent {}
+}
 

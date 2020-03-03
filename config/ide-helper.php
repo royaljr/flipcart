@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return[
 
     /*
     |--------------------------------------------------------------------------
@@ -13,7 +13,7 @@ return array(
 
     'filename'  => '_ide_helper',
     'format'    => 'php',
-    
+
     'meta_filename' => '.phpstorm.meta.php',
 
     /*
@@ -25,7 +25,7 @@ return array(
     |
     */
 
-    'include_fluent' => false,
+    'include_fluent' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -75,7 +75,7 @@ return array(
     |
     */
 
-    'include_helpers' => false,
+    'include_helpers' => true,
 
     'helper_files' => array(
         base_path().'/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
@@ -92,7 +92,7 @@ return array(
     */
 
     'model_locations' => array(
-        'app',
+        'app/Model',
     ),
 
 
@@ -106,8 +106,8 @@ return array(
     */
 
     'extra' => array(
-        'Eloquent' => array('Illuminate\Database\Eloquent\Builder', 'Illuminate\Database\Query\Builder'),
-        'Session' => array('Illuminate\Session\Store'),
+        'Eloquent' => array(Builder::class, \Illuminate\Database\Query\Builder::class),
+        'Session' => array(Store::class),
     ),
 
     'magic' => array(),
@@ -206,4 +206,4 @@ return array(
     */
     'include_class_docblocks' => false,
 
-);
+];
